@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using KeepAustinRecycling.Home
 
 namespace KeepAustinRecycling
 {
@@ -8,7 +9,7 @@ namespace KeepAustinRecycling
         {
             InitializeComponent();
 
-            MainPage = new KeepAustinRecyclingPage();
+            MainPage = new NavigationPage(new HomePage());
         }
 
         protected override void OnStart()
