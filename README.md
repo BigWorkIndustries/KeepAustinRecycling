@@ -1,6 +1,8 @@
 # KeepAustinRecycling
 Keep Austin Recycling!
 
+## Info
+* Recycle API data can be found [HERE](https://dev.socrata.com/foundry/data.austintexas.gov/hp3m-f33e)
 
 __________
 
