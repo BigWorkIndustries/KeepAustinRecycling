@@ -39,11 +39,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)MapDetail\MapDetailPage.xaml.cs">
       <DependentUpon>MapDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)API\RecycleScheduleAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RecycleSchedule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Home\" />
     <Folder Include="$(MSBuildThisFileDirectory)About\" />
     <Folder Include="$(MSBuildThisFileDirectory)Map\" />
     <Folder Include="$(MSBuildThisFileDirectory)MapDetail\" />
+    <Folder Include="$(MSBuildThisFileDirectory)API\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
   </ItemGroup>
 </Project>

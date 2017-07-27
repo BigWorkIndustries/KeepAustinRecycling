@@ -1,5 +1,5 @@
 ﻿using Xamarin.Forms;
-using KeepAustinRecycling.Home
+using KeepAustinRecycling.Home;
 
 namespace KeepAustinRecycling
 {
