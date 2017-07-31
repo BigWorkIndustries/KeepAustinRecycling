@@ -31,15 +31,6 @@ namespace KeepAustinRecycling.API
 
                 callback(response.Data);
 			});
-
-
-            /*
-			var asyncHandle = client.ExecuteAsync(request, response =>
-			{
-
-				Console.WriteLine(response.Content);
-			});
-			*/
         }
     }
 }

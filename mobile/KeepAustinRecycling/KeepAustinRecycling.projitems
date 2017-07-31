@@ -41,6 +41,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)API\RecycleScheduleAPI.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RecycleSchedule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\GeoUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Home\" />
@@ -49,5 +50,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)MapDetail\" />
     <Folder Include="$(MSBuildThisFileDirectory)API\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Util\" />
   </ItemGroup>
 </Project>
