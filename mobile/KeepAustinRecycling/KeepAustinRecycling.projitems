@@ -42,6 +42,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)API\RecycleScheduleAPI.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RecycleSchedule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\GeoUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\CrossPushNotificationListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Home\" />

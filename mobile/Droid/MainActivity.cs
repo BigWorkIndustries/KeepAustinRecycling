@@ -7,6 +7,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using PushNotification.Plugin;
+using KeepAustinRecycling.Util;
 
 namespace KeepAustinRecycling.Droid
 {
@@ -15,6 +17,8 @@ namespace KeepAustinRecycling.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+			CrossPushNotification.Initialize<CrossPushNotificationListener>("<ANDROID SENDER ID>");
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
