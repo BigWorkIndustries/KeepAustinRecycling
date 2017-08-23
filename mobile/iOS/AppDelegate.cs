@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using KeepAustinRecycling.Util;
+using PushNotification.Plugin;
 using UIKit;
 
 namespace KeepAustinRecycling.iOS
@@ -12,6 +14,8 @@ namespace KeepAustinRecycling.iOS
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+			CrossPushNotification.Initialize<CrossPushNotificationListener>();
+
             global::Xamarin.Forms.Forms.Init();
 
             // Code for starting up the Xamarin Test Cloud Agent
