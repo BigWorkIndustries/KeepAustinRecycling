@@ -8,13 +8,8 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
-import * as fromCollectionSchedule from './collection-schedule/collection-schedule.reducer';
-import { EffectsModule } from '@ngrx/effects';
-import { CollectionScheduleEffects } from './collection-schedule/collection-schedule.effects';
+import {NgxsModule} from 'ngxs';
+import {CollectionScheduleStore} from './+state/collection-schedule/collection-schedule.store';
 
 @NgModule({
   declarations: [
@@ -25,10 +20,9 @@ import { CollectionScheduleEffects } from './collection-schedule/collection-sche
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    StoreModule.forRoot(reducers, { metaReducers }),
-    !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreModule.forFeature('collectionSchedule', fromCollectionSchedule.reducer),
-    EffectsModule.forFeature([CollectionScheduleEffects]),
+    NgxsModule.forRoot([
+      CollectionScheduleStore
+    ], { /* optional options */ })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
