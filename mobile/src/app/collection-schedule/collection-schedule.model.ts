@@ -1,4 +1,4 @@
-export class CollectionSchedule {
+export interface CollectionSchedule {
   city:string;
   collection_day:string;
   collection_week: string;
