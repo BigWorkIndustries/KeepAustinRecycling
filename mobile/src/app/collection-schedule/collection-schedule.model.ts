@@ -1,4 +1,6 @@
-export interface CollectionSchedule {
+import * as _ from 'lodash';
+
+export class CollectionSchedule {
   city:string;
   collection_day:string;
   collection_week: string;
@@ -8,4 +10,14 @@ export interface CollectionSchedule {
   street_nam: string;
   street_typ: string;
   zip: string;
+
+  /**
+   * Constructor.
+   * @param {Partial<CollectionSchedule>} data
+   */
+  constructor(data: Partial<CollectionSchedule>) {
+    if (data) {
+      _.extend(this, data);
+    }
+  }
 }
