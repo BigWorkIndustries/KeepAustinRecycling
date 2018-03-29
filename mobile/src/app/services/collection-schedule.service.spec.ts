@@ -1,11 +1,9 @@
 import { TestBed } from '@angular/core/testing';
-
-import { HttpClient, HttpClientModule, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { of } from 'rxjs/observable/of';
 import {CollectionScheduleService} from './collection-schedule.service';
 import {CollectionSchedule} from '../collection-schedule/collection-schedule.model';
 import {MOCK_COLLECTION_SCHEDULE_RESPONSE} from './collection-schedule.service.mock';
-// tslint:disable-next-line:max-line-length
 
 
 describe('CollectionScheduleService', () => {
