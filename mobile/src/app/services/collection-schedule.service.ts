@@ -4,7 +4,9 @@ import {of} from 'rxjs/observable/of';
 import {HttpClient} from '@angular/common/http';
 import {CollectionSchedule} from '../collection-schedule/collection-schedule.model';
 import {map} from 'rxjs/operators';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class CollectionScheduleService {
 
   /**
