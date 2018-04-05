@@ -4,6 +4,8 @@ import { of } from 'rxjs/observable/of';
 import {CollectionScheduleService} from './collection-schedule.service';
 import {CollectionSchedule} from '../collection-schedule/collection-schedule.model';
 import {MOCK_COLLECTION_SCHEDULE_RESPONSE} from './collection-schedule.service.mock';
+import {CollectionScheduleServiceRequest} from './collection-schedule.service.request';
+import * as _ from 'lodash';
 
 
 describe('CollectionScheduleService', () => {
@@ -29,7 +31,7 @@ describe('CollectionScheduleService', () => {
       expect(service).toBeTruthy();
     });
 
-    it('should return the address configuration', done => {
+    it('should return the collection schedule', done => {
       service.get().subscribe(actual => {
         expect(actual).toBeDefined();
 
@@ -39,6 +41,23 @@ describe('CollectionScheduleService', () => {
 
         const expected = new CollectionSchedule(MOCK_COLLECTION_SCHEDULE_RESPONSE[0]);
         expect(actual[0]).toEqual(expected);
+        done();
+      });
+    });
+
+    it('should return the correct collection schedule', done => {
+      const expected = new CollectionScheduleServiceRequest({collection_day: 'FRIDAY'});
+      service.get().subscribe(response => {
+        expect(response).toBeDefined();
+
+        expect(response.length > 0).toBe(true);
+
+        expect(response[0]).toEqual(jasmine.any(CollectionSchedule));
+
+        response.forEach((actual) => {
+          expect(actual.collection_day).toEqual(expected.collection_day);
+        });
+
         done();
       });
     });
