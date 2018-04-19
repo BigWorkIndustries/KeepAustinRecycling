@@ -9,7 +9,10 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StoreModule } from '@ngrx/store';
-import * as fromCollectionSchedule from './collection-schedule/collection-schedule.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { AppStateModule } from './+state/app-state.module';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +23,7 @@ import * as fromCollectionSchedule from './collection-schedule/collection-schedu
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    StoreModule.forRoot({}),
-    StoreModule.forFeature('collectionSchedule', fromCollectionSchedule.reducer)
+    AppStateModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
