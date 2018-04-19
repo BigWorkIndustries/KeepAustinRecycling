@@ -42,7 +42,7 @@ export class AddCollectionSchedules implements Action {
 export class UpsertCollectionSchedules implements Action {
   readonly type = CollectionScheduleActionTypes.UpsertCollectionSchedules;
 
-  constructor(public payload: { collectionSchedules: Update<CollectionSchedule[]> }) {}
+  constructor(public payload: { collectionSchedules: Update<CollectionSchedule>[] }) {}
 }
 
 export class UpdateCollectionSchedule implements Action {
