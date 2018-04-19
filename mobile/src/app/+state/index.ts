@@ -6,15 +6,13 @@ import {
   MetaReducer
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
-import * as fromCollectionSchedule from './collection-schedule/collection-schedule.reducer';
+import * as fromCollectionSchedule from '../modules/collection-schedule/+state/collection-schedule.reducer';
 
 export interface State {
-
   collectionSchedule: fromCollectionSchedule.State;
 }
 
 export const reducers: ActionReducerMap<State> = {
-
   collectionSchedule: fromCollectionSchedule.reducer,
 };
 

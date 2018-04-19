@@ -1,8 +1,7 @@
 import * as _ from 'lodash';
 import {HttpParams} from '@angular/common/http';
-import {
-  CollectionScheduleClass
-} from '../+state/collection-schedule/collection-schedule.model';
+import {CollectionScheduleClass} from '../../modules/collection-schedule/+state/collection-schedule.model';
+
 
 export class CollectionScheduleServiceRequest extends CollectionScheduleClass {
 

@@ -30,7 +30,7 @@ export class AddCollectionSchedule implements Action {
 export class UpsertCollectionSchedule implements Action {
   readonly type = CollectionScheduleActionTypes.UpsertCollectionSchedule;
 
-  constructor(public payload: { collectionSchedule: CollectionSchedule }) {}
+  constructor(public payload: { collectionSchedule: Update<CollectionSchedule> }) {}
 }
 
 export class AddCollectionSchedules implements Action {
@@ -42,7 +42,7 @@ export class AddCollectionSchedules implements Action {
 export class UpsertCollectionSchedules implements Action {
   readonly type = CollectionScheduleActionTypes.UpsertCollectionSchedules;
 
-  constructor(public payload: { collectionSchedules: CollectionSchedule[] }) {}
+  constructor(public payload: { collectionSchedules: Update<CollectionSchedule[]> }) {}
 }
 
 export class UpdateCollectionSchedule implements Action {
