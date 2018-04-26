@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
+## Folder Structure
+
+This project follows [THIS](https://medium.com/@motcowley/angular-folder-structure-d1809be95542) suggested folder structure.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

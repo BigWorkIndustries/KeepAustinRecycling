@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 
 export interface CollectionSchedule {
-  id?: string;
+  id: string;
   city?:string;
   collection_day?:string;
   collection_week?: string;
@@ -14,6 +14,8 @@ export interface CollectionSchedule {
 }
 
 export class CollectionScheduleClass implements CollectionSchedule {
+
+  id: string;
 
   /**
    * Constructor.

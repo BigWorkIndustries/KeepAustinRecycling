@@ -11,7 +11,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { AppStateModule } from './+state/app-state.module';
+import { CollectionScheduleModule } from './modules/collection-schedule/collection-schedule.module';
+import {EffectsModule} from '@ngrx/effects';
+import {metaReducers, reducers} from './+state/index';
+import {AppEffects} from './+state/app.effects';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { AppStateModule } from './+state/app-state.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AppStateModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot([AppEffects]),
+    CollectionScheduleModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

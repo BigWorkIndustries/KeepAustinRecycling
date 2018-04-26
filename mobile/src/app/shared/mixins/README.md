@@ -1,3 +1,3 @@
 # Mixins
 
-* See: https://www.npmjs.com/package/helpful-decorators
+* See: https://github.com/bcherny/magical-mixin

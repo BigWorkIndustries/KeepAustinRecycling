@@ -5,7 +5,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 import {CollectionScheduleServiceRequest} from './collection-schedule.service.request';
-import {CollectionSchedule } from '../+state/collection-schedule/collection-schedule.model';
+import {CollectionSchedule} from '../../modules/collection-schedule/+state/collection-schedule.model';
 
 @Injectable()
 export class CollectionScheduleService {
